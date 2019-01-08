@@ -56,6 +56,23 @@ namespace WindowsFormsApp1
             MessageBox.Show($"{user.Surname} {user.Name} {user.Age} {gender}");
         }
 
-
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.PerformStep();
+            if (progressBar1.Value == progressBar1.Maximum)
+            {
+                timer1.Stop();
+                MessageBox.Show("okey");
+            }
+            else
+                progressBar1.Value++;
+        }
     }
 }
+
+
+
+
+
+
+

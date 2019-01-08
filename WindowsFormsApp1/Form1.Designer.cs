@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button = new System.Windows.Forms.Button();
             this.nametextBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.femaleradioButton2 = new System.Windows.Forms.RadioButton();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,10 +137,16 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(363, 305);
+            this.progressBar1.Location = new System.Drawing.Point(187, 301);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(371, 23);
+            this.progressBar1.Size = new System.Drawing.Size(300, 23);
             this.progressBar1.TabIndex = 10;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // form1
             // 
@@ -177,6 +185,7 @@
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.RadioButton femaleradioButton2;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
