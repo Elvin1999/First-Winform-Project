@@ -20,8 +20,6 @@ namespace WindowsFormsApp1
         {
             BackColor = Color.Red;
         }
-
-
         private void button_Click(object sender, EventArgs e)
         {
             user = new User();
@@ -66,6 +64,15 @@ namespace WindowsFormsApp1
             }
             else
                 progressBar1.Value++;
+        }
+
+        private void button_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = new Cursor(Cursor.Current.Handle);
+           // Console.WriteLine(Cursor.Position.X); Console.WriteLine(Cursor.Position.Y);
+            Random r = new Random();
+            button.Left = r.Next(0, Width / 2);
+            button.Top = r.Next(0, Height / 2);
         }
     }
 }

@@ -53,6 +53,7 @@
             this.button.Text = "button1";
             this.button.UseVisualStyleBackColor = true;
             this.button.Click += new System.EventHandler(this.button_Click);
+            this.button.MouseHover += new System.EventHandler(this.button_MouseHover);
             // 
             // nametextBox1
             // 
