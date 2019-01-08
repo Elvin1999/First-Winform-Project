@@ -21,16 +21,26 @@ namespace WindowsFormsApp1
             BackColor = Color.Red;
         }
 
-    
+
         private void button_Click(object sender, EventArgs e)
         {
             user = new User();
             Random r = new Random();
-            button.Left = r.Next(0, Width/2);
-            button.Top = r.Next(0, Height/2);
+            button.Left = r.Next(0, Width / 2);
+            button.Top = r.Next(0, Height / 2);
             BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), 0);
             var text = agetextBox.Text;
-            user.Age = Convert.ToInt32(text);
+            var check = int.TryParse(text, out int result);
+            if (check)
+            {
+                user.Age = Convert.ToInt32(result);
+            }
+            else
+            {
+                user.Age = 0;
+                MessageBox.Show("Age must be number");
+                return;
+            }
             user.Name = nametextBox1.Text;
             user.Surname = surnametextBox.Text;
             var item = maleradioButton;
