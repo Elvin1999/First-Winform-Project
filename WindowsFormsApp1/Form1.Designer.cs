@@ -38,6 +38,7 @@
             this.maleradioButton = new System.Windows.Forms.RadioButton();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.femaleradioButton2 = new System.Windows.Forms.RadioButton();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,11 +133,19 @@
             this.femaleradioButton2.Text = "female";
             this.femaleradioButton2.UseVisualStyleBackColor = true;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(363, 305);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(371, 23);
+            this.progressBar1.TabIndex = 10;
+            // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.agetextBox);
             this.Controls.Add(this.surnametextBox);
@@ -167,6 +176,7 @@
         private System.Windows.Forms.RadioButton maleradioButton;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.RadioButton femaleradioButton2;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
